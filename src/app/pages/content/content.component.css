@@ -1,0 +1,31 @@
+.container-content {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100vh;
+    margin-top: 1.2rem;
+
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.content-cover > img {
+    border: 5px solid rgb(145, 145, 145);
+    border-radius: .3rem;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+}
+
+.content-description {
+    margin: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+}
+
+.content-description > p {
+    color: #7d7d7d;
+}
