@@ -1,7 +1,6 @@
 .container-big-card {
-    border: 2px solid #fff;
     width: 400px;
-    height: 600px;
+    height: 435px;
     margin: 0 1rem;
 
     display: flex;
@@ -16,7 +15,7 @@
 
 .big-card-title > h1 {
     margin: 1rem .5rem;
-    font-size: 1.125rem;
+    font-size: 2rem;
 }
 
 .big-card-description {
