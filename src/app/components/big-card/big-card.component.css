@@ -19,7 +19,10 @@
     font-size: 1.125rem;
 }
 
-.big-card-description > p {
+.big-card-description {
     margin: 0 .5rem;
+}
+
+.big-card-description > p > a {
     color: #7D7D7D;
 }
