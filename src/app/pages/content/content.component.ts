@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from 'src/app/data/dataFake';
 
 @Component({
   selector: 'app-content',
@@ -7,13 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  photoCover: string = 'https://www.alura.com.br/artigos/assets/como-comecar-com-angular/como-comecar-com-angular.png';
-  contentTitle: string = 'Minha notícia';
-  contentDescription: string = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur temporibus vitae at non unde nobis tenetur repellat cupiditate, aliquam ipsa eos natus inventore! Tempora magni incidunt quam, eligendi esse nisi?';
+  photoCover: string = '';
+  contentTitle: string = '';
+  contentDescription: string = '';
+  private id:string | null = '0';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private route:ActivatedRoute) {
   }
 
+  ngOnInit(): void {     
+    this.route.paramMap.subscribe(value => this.id = value.get("id"))
+    this.setValuesToComponent(this.id)
+  }
+
+  setValuesToComponent(id:string | null) {
+     const result = dataFake.filter(article => article.id === id)[0]
+     
+     this.contentTitle = result.title;
+     this.contentDescription = result.description;
+     this.photoCover = result.photo;
+  }
 }

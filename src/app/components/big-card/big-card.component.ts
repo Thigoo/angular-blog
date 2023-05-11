@@ -14,8 +14,7 @@ export class BigCardComponent implements OnInit {
   @Input()
   cardDescription: string = '';
   @Input()
-  linkToContent: string = '';
-
+  Id:string = "0";
   constructor() { }
 
   ngOnInit(): void {
